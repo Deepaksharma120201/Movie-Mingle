@@ -24,7 +24,7 @@
 .navbar-left ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 25px;
 }
 
 .navbar-left ul li {
@@ -54,7 +54,7 @@
 .navbar-profile {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   cursor: pointer;
   position: relative;
 }
@@ -78,4 +78,8 @@
 
 .navbar-profile:hover .dropdown {
   display: block;
+}
+
+.nav-dark {
+  background: #141414;
 }

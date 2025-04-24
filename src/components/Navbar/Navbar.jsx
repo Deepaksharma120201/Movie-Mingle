@@ -2,11 +2,25 @@ import { FaSearch, FaBell, FaCaretDown } from "react-icons/fa";
 
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import profile_img from "../../assets/profile_img.png";
+import { useEffect, useRef } from "react";
+import { FaUserLarge } from "react-icons/fa6";
+import { logout } from "../../firebase";
 
 function Navbar() {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("nav-dark");
+      } else {
+        navRef.current.classList.remove("nav-dark");
+      }
+    });
+  }, []);
+
   return (
-    <div className="navbar">
+    <div ref={navRef} className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="" />
         <ul>
@@ -14,19 +28,22 @@ function Navbar() {
           <li>TV Shows</li>
           <li>Movies</li>
           <li>New & Popular</li>
-          <li>My List</li>
-          <li>Browse by Languages</li>
         </ul>
       </div>
       <div className="navbar-right">
         <FaSearch className="icons" />
-        <p>Children</p>
         <FaBell className="icons" />
         <div className="navbar-profile">
-          <img src={profile_img} alt="" className="profile" />
+          <FaUserLarge className="icons" />
           <FaCaretDown className="icons" />
           <div className="dropdown">
-            <p>Sign out of Netflix</p>
+            <p
+              onClick={() => {
+                logout();
+              }}
+            >
+              Sign out of Netflix
+            </p>
           </div>
         </div>
       </div>
