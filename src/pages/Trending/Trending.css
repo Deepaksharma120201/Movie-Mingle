@@ -1,0 +1,64 @@
+.trending {
+  padding: 0 1rem;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.time-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.time-button {
+  padding: 0.35rem 1rem;
+  background-color: transparent;
+  border: 1px solid teal;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.time-button.active {
+  background-color: white;
+  color: black;
+}
+
+/* Grid layout for the movie items */
+.movie-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.skeleton {
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 4px;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ddd;
+  }
+  50% {
+    background-color: #bbb;
+  }
+  100% {
+    background-color: #ddd;
+  }
+}

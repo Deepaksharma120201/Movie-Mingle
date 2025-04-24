@@ -1,0 +1,173 @@
+.details-page {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.details-banner {
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.details-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.poster {
+  height: 450px;
+  border-radius: 6px;
+}
+
+.meta {
+  flex: 1;
+}
+
+.meta h1 {
+  font-size: 2.2rem;
+}
+
+.year {
+  color: #bbb;
+  font-weight: normal;
+}
+
+.meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.release-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.release-info .icons {
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.user-score {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle-score {
+  background-color: #222;
+  border-radius: 50%;
+  padding: 0.65rem 0.65rem;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.circle-score.green {
+  background-color: #21d07a;
+}
+
+.circle-score.yellow {
+  background-color: #d2d531;
+}
+
+.circle-score.red {
+  background-color: #db2360;
+}
+
+.watchlist-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.watchlist-btn.in {
+  border-color: #21d07a;
+  color: #21d07a;
+}
+
+.watchlist-btn:hover {
+  background-color: #333;
+}
+
+.tagline {
+  color: gray;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+h2{
+  margin-bottom: 1rem;
+}
+
+p{
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.genres {
+  margin-top: 1rem;
+}
+
+.genre {
+  display: inline-block;
+  background: #333;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+.cast-section,
+.videos-section {
+  padding: 2rem;
+}
+
+.cast-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.cast-list::-webkit-scrollbar {
+  display: none;
+}
+
+.cast-img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.video-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.video-item p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}

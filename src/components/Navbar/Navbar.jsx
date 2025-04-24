@@ -2,36 +2,44 @@ import { FaSearch, FaBell, FaCaretDown } from "react-icons/fa";
 
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import { useEffect, useRef } from "react";
 import { FaUserLarge } from "react-icons/fa6";
-import { logout } from "../../firebase";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../context/authProvider";
 
 function Navbar() {
-  const navRef = useRef();
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= 80) {
-        navRef.current.classList.add("nav-dark");
-      } else {
-        navRef.current.classList.remove("nav-dark");
-      }
-    });
-  }, []);
+  const { logout } = useAuth();
 
   return (
-    <div ref={navRef} className="navbar">
+    <div className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="" />
         <ul>
-          <li>Home</li>
-          <li>TV Shows</li>
-          <li>Movies</li>
-          <li>New & Popular</li>
+          <li>
+            <Link to={`/`} className="nav-link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to={`/movies`} className="nav-link">
+              Movies
+            </Link>
+          </li>
+          <li>
+            <Link to={`/shows`} className="nav-link">
+              TV Shows
+            </Link>
+          </li>
+          <li>
+            <Link to={`/trending`} className="nav-link">
+              Trending Now
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">
-        <FaSearch className="icons" />
+        <Link to={`/search`} className="nav-link">
+          <FaSearch className="icons" />
+        </Link>
         <FaBell className="icons" />
         <div className="navbar-profile">
           <FaUserLarge className="icons" />

@@ -1,9 +1,13 @@
 import "./Login.css";
 import logo from "../../assets/logo.png";
-import { useState } from "react";
-import { login, signup } from "../../firebase";
+import { useEffect, useState } from "react";
+import { useAuth } from "../../context/authProvider";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const { user, signup, login } = useAuth();
+  const navigate = useNavigate();
+
   const [signState, setSignState] = useState("Sign In");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,21 +16,30 @@ function Login() {
   const user_auth = async (e) => {
     e.preventDefault();
     if (signState === "Sign In") {
-      await login(email, password);
+      const success = await login(email, password);
+      if (success) {
+        navigate("/");
+      }
     } else {
-      await signup(name, email, password);
+      const success = await signup(name, email, password);
+      if (success) {
+        navigate("/");
+      }
     }
-    setName("");
-    setEmail("");
-    setPassword("");
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   return (
     <div className="login">
       <img src={logo} alt="" className="login-logo" />
       <div className="login-form">
         <h1>{signState}</h1>
-        <form>
+        <form onSubmit={user_auth}>
           {signState === "Sign Up" ? (
             <input
               type="text"

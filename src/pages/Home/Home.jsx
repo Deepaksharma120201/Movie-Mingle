@@ -10,7 +10,6 @@ import Footer from "../../components/Footer/Footer";
 function Home() {
   return (
     <div className="home">
-      <Navbar />
       <div className="hero">
         <img src={hero_banner} alt="" className="banner-img" />
         <div className="hero-caption">
