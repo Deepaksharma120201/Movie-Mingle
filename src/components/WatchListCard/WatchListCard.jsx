@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useFirestore } from "../../services/firestore";
 import { useAuth } from "../../context/authProvider";
 import { FaStar, FaTimes } from "react-icons/fa";
-import "./WatchlistCard.css";
+import "./WatchListCard.css";
 import { imagePath } from "../../services/apiService";
 
 const WatchlistCard = ({ type, item, setWatchlist }) => {
