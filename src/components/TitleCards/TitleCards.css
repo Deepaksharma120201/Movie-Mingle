@@ -23,3 +23,25 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .title-cards {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .title-cards h2 {
+    font-size: 20px;
+  }
+  .card-list img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-cards h2 {
+    font-size: 15px;
+  }
+  .card-list img {
+    width: 80px;
+  }
+}

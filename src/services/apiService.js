@@ -35,7 +35,6 @@ export const fetchCredits = async (type, id) => {
   const res = await axios.get(
     `${baseUrl}/${type}/${id}/credits?api_key=${apiKey}`
   );
-  console.log(res);
   return res?.data;
 };
 

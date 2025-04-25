@@ -35,3 +35,14 @@
   color: gray;
   font-size: 16px;
 }
+
+@media (max-width: 800px){
+  .footer-icons .icon{
+    font-size: 20px;
+  }
+  .footer ul{
+    grid-template-columns: auto auto;
+    gap: 8px;
+    font-size: 14px;
+  }
+}

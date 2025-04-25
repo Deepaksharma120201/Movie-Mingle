@@ -34,7 +34,7 @@ function Search() {
   return (
     <div className="search">
       <div className="search-header">
-        <h2 className="search-title">Search</h2>
+        <h2 className="search-title">Search Section</h2>
       </div>
 
       <form onSubmit={handleSearch} className="search-form">

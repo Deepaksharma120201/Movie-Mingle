@@ -7,13 +7,14 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const { user, signup, login } = useAuth();
   const navigate = useNavigate();
-
+  const [isLoading, setIsLoading] = useState(false);
   const [signState, setSignState] = useState("Sign In");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const user_auth = async (e) => {
+    setIsLoading(true);
     e.preventDefault();
     if (signState === "Sign In") {
       const success = await login(email, password);
@@ -26,6 +27,7 @@ function Login() {
         navigate("/");
       }
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -36,6 +38,11 @@ function Login() {
 
   return (
     <div className="login">
+      {isLoading && (
+        <div className="spinner-container">
+          <div className="spinner"></div>
+        </div>
+      )}
       <img src={logo} alt="" className="login-logo" />
       <div className="login-form">
         <h1>{signState}</h1>

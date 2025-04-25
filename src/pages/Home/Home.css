@@ -33,10 +33,6 @@
   margin-bottom: 50px;
 }
 
-.hero-btns .btn .icon {
-  font-size: 20px;
-}
-
 .hero-btns .btn {
   border: 0;
   outline: 0;
@@ -67,4 +63,44 @@
 .more-cards {
   margin-top: 170px;
   padding-left: 6%;
+}
+
+@media (max-width: 1024px) {
+  .hero-caption .title-cards {
+    display: none;
+  }
+  .hero-btns {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-caption {
+    padding-left: 4%;
+  }
+  .caption-img {
+    margin-bottom: 10px;
+    width: 40%;
+  }
+  .hero-caption p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .more-cards {
+    padding-left: 4%;
+  }
+}
+
+@media (max-width: 500px) {
+  .caption-img {
+    display: none;
+  }
+  .btn .icons {
+    font-size: 15px;
+  }
+  .btn {
+    padding: 4px 10px;
+    gap: 5px;
+    font-size: 10px;
+  }
 }

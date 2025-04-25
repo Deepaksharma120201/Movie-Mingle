@@ -1,6 +1,7 @@
 .details-page {
   color: white;
   font-family: Arial, sans-serif;
+  margin: 0 5%;
 }
 
 .details-banner {
@@ -77,18 +78,6 @@
   font-size: 0.9rem;
 }
 
-.circle-score.green {
-  background-color: #21d07a;
-}
-
-.circle-score.yellow {
-  background-color: #d2d531;
-}
-
-.circle-score.red {
-  background-color: #db2360;
-}
-
 .watchlist-btn {
   background-color: transparent;
   border: 1px solid #ccc;
@@ -117,11 +106,11 @@
   margin: 1rem 0;
 }
 
-h2{
+h2 {
   margin-bottom: 1rem;
 }
 
-p{
+p {
   margin-bottom: 1rem;
   font-size: 20px;
 }
@@ -162,12 +151,38 @@ p{
 
 .video-list {
   display: flex;
+  gap: 1.5rem;
   overflow-x: auto;
-  gap: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.video-item {
+  max-width: 240px;
+  height: 160px;
+  flex-shrink: 0;
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 120px;
+  border: none;
+  border-radius: 8px 8px 0 0;
 }
 
 .video-item p {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+  font-size: 14px;
+  text-align: center;
+}
+
+.video-list::-webkit-scrollbar {
+  display: none;
 }

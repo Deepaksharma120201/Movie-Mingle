@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth, db } from "../services/firebase";
+import { auth } from "../services/firebase";
 import { toast } from "react-toastify";
 import {
   onAuthStateChanged,
@@ -9,7 +9,6 @@ import {
 } from "firebase/auth";
 
 import PropTypes from "prop-types";
-import { addDoc, collection } from "firebase/firestore";
 
 const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
@@ -19,16 +18,9 @@ const AuthProvider = ({ children }) => {
   // Functions
   const signup = async (name, email, password) => {
     try {
-      const res = await createUserWithEmailAndPassword(auth, email, password);
-      const user = res.user;
-      await addDoc(collection(db, "user"), {
-        uid: user.uid,
-        name,
-        authProvider: "local",
-        email,
-      });
+      await createUserWithEmailAndPassword(auth, email, password);
+      toast.success("Account created Successfully!");
     } catch (error) {
-      console.log(error);
       toast.error(error.code.split("/")[1].split("-").join(" "));
     }
   };
@@ -36,13 +28,14 @@ const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      toast.success("Login Successfully!");
     } catch (error) {
-      console.log(error);
       toast.error(error.code.split("/")[1].split("-").join(" "));
     }
   };
 
   function logout() {
+    toast.success("Signout Successfully!");
     return signOut(auth);
   }
 

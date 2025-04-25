@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Shows from "./pages/Shows/Shows";
 import Home from "./pages/Home/Home";
@@ -9,8 +10,9 @@ import Search from "./pages/Search/Search";
 import Trending from "./pages/Trending/Trending";
 import DetailsPage from "./pages/DetailsPage/Details";
 import ProtectedRoute from "./components/ProtectedRoutes";
-import { AuthProvider } from "./context/authProvider";
+import Watchlist from "./pages/WatchList/Watchlist";
 import Navbar from "./components/Navbar/Navbar";
+import { AuthProvider } from "./context/authProvider";
 
 function App() {
   const location = useLocation();
@@ -32,6 +34,7 @@ function App() {
               <Route path="/shows" element={<Shows />} />
               <Route path="/trending" element={<Trending />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/watchlist" element={<Watchlist />} />
               <Route path="/:type/:id" element={<DetailsPage />} />
             </Route>
           </Routes>
