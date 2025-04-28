@@ -1,52 +1,53 @@
 # 🎬 Netflix Clone using React + Vite
 
-A modern, responsive Netflix UI clone built using **React** and **Vite** with Firebase authentication, Firestore-powered watchlist, dynamic routing, and TMDB API integration.  
+A modern, responsive Netflix UI clone built using **React** and **Vite** with Firebase authentication, Firestore-powered watchlist, dynamic routing, and TMDB API integration.
 
 > ⚡ Fully responsive, with a drawer navigation on small screens, toast notifications, and dark theme styling.
 
-
 ## 🚀 Demo
 
-👉 **[Visit this link see the live demo](https://your-live-demo-link.com)**
+👉 **[Visit this link see the live demo](https://netflix-clone-sage-xi.vercel.app/)**
 
 ## 🚀 Features
 
 - 🔐 **Authentication**
+
   - Email/Password login and signup
   - Google OAuth
   - Protected Routes
 
 - 🎞️ **Browse Movies & TV Shows**
+
   - Home, Movies, Shows, Trending pages
   - Search by keyword
   - Detailed view with backdrop and info
 
 - ❤️ **Watchlist**
+
   - Add/remove movies or shows to personal list
   - Synced with Firebase Firestore
 
 - 🌙 **Responsive Design**
+
   - Drawer menu on smaller screens
   - Desktop navigation on larger screens
 
 - 🔔 **Toast Notifications**
   - Feedback for user actions (login, watchlist)
 
-
 ## 🛠️ Tech Stack
 
-| Category       | Technology         |
-|----------------|--------------------|
-| Frontend       | React + Vite       |
-| Styling        | CSS Modules        |
-| Routing        | React Router DOM   |
-| Authentication | Firebase Auth      |
-| Database       | Firebase Firestore |
-| State          | React Context API  |
+| Category       | Technology                |
+| -------------- | ------------------------- |
+| Frontend       | React + Vite              |
+| Styling        | CSS Modules               |
+| Routing        | React Router DOM          |
+| Authentication | Firebase Auth             |
+| Database       | Firebase Firestore        |
+| State          | React Context API         |
 | Icons          | React Icons / FontAwesome |
-| Notifications  | React Toastify     |
-| API            | TMDB API           |
-
+| Notifications  | React Toastify            |
+| API            | TMDB API                  |
 
 ## 📁 Project Structure
 
@@ -62,7 +63,6 @@ src/
 ├── main.jsx            → React entry point
 └── firebase.js         → Firebase config and exports
 ```
-
 
 ## 🔧 Getting Started
 
@@ -80,6 +80,7 @@ npm install
 ```
 
 ### 🔥 Firebase Configuration
+
 ```
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Create a new Firebase project
@@ -115,6 +116,7 @@ export const db = getFirestore(app);
 ```
 
 ## 🌐 TMDB API Setup
+
 ```
 1. Go to [TMDB API](https://www.themoviedb.org/documentation/api)
 2. Sign up and create an API key
@@ -142,7 +144,6 @@ Then visit:
 http://localhost:5173
 ```
 
-
 ## 🔒 Firebase Security Rules (Optional)
 
 Add the following rules in Firebase Firestore settings:
@@ -164,7 +165,6 @@ service cloud.firestore {
 - 🔐 [Firebase](https://firebase.google.com/) — Authentication & backend
 - 🎨 [React Icons](https://react-icons.github.io/react-icons/) — Icon packs
 - 🔔 [React Toastify](https://fkhadra.github.io/react-toastify/introduction) — Toast notifications
-
 
 ## 📄 License
 

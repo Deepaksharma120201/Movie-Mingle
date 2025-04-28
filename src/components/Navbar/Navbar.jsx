@@ -17,13 +17,10 @@ function Navbar() {
     <>
       <div className="navbar">
         <div className="navbar-left">
-          <img src={logo} alt="logo" />
+          <Link to={`/`} className="nav-link">
+            <img src={logo} alt="logo" className="logo" />
+          </Link>
           <ul>
-            <li>
-              <Link to={`/`} className="nav-link">
-                Home
-              </Link>
-            </li>
             <li>
               <Link to={`/movies`} className="nav-link">
                 Movies

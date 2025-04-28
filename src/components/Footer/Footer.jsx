@@ -24,9 +24,7 @@ function Footer() {
         <li>Corporate Information</li>
         <li>Contact Us</li>
       </ul>
-      <p className="copyright-text">
-        &copy; 1997-{new Date().getFullYear()} Netflix, Inc.
-      </p>
+      <p className="copyright-text">&copy; Since 2025 MovieMingle, Inc.</p>
     </div>
   );
 }

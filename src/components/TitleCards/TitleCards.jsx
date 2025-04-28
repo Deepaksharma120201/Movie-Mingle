@@ -15,7 +15,7 @@ function TitleCards({ title, category }) {
 
   return (
     <div className="title-cards">
-      <h2>{title ? title : "Popular on Netflix"}</h2>
+      <h2>{title ? title : "Popular Movies"}</h2>
       <div className="card-list">
         {apiData &&
           apiData?.map((card, index) => {

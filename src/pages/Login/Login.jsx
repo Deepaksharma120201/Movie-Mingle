@@ -43,7 +43,9 @@ function Login() {
           <div className="spinner"></div>
         </div>
       )}
-      <img src={logo} alt="" className="login-logo" />
+      <a href="/">
+        <img src={logo} alt="" className="login-logo" />
+      </a>
       <div className="login-form">
         <h1>{signState}</h1>
         <form onSubmit={user_auth}>
@@ -86,13 +88,13 @@ function Login() {
         <div className="form-switch">
           {signState === "Sign In" ? (
             <p>
-              New to Netflix?
+              Don't have an account?
               <span
                 onClick={() => {
                   setSignState("Sign Up");
                 }}
               >
-                Sign Up Now
+                Sign Up
               </span>
             </p>
           ) : (
@@ -103,7 +105,7 @@ function Login() {
                   setSignState("Sign In");
                 }}
               >
-                Sign In Now
+                Sign In
               </span>
             </p>
           )}
