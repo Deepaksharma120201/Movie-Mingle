@@ -15,12 +15,18 @@ export const fetchCategory = async (category) => {
   return data?.results;
 };
 
+// Tv-Shows
+export const fetchTvShows = async () => {
+  const { data } = await axios.get(`${baseUrl}/tv/popular?api_key=${apiKey}`);
+  return data?.results;
+};
+
 // TRENDING
 export const fetchTrending = async (timeWindow = "day") => {
   const { data } = await axios.get(
     `${baseUrl}/trending/all/${timeWindow}?api_key=${apiKey}`
   );
-
+  console.log(data);
   return data?.results;
 };
 

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./TitleCards.css";
-import { fetchCategory, imagePath } from "../../services/apiService";
+import {
+  fetchCategory,
+  fetchTvShows,
+  imagePath,
+} from "../../services/apiService";
 import ImageCard from "../ImageCard/ImageCard";
 import { Link } from "react-router-dom";
 
@@ -8,9 +12,15 @@ function TitleCards({ title, category }) {
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-    fetchCategory(category ? category : "now_playing")
-      .then((res) => setApiData(res))
-      .catch((err) => console.error(err));
+    if (category === "popular") {
+      fetchTvShows()
+        .then((res) => setApiData(res))
+        .catch((err) => console.error(err));
+    } else {
+      fetchCategory(category ? category : "now_playing")
+        .then((res) => setApiData(res))
+        .catch((err) => console.error(err));
+    }
   }, [category]);
 
   return (

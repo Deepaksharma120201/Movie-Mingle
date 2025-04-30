@@ -1,12 +1,12 @@
-# 🎬 Netflix Clone using React + Vite
+# 🎬 MovieMingle using React + Vite
 
-A modern, responsive Netflix UI clone built using **React** and **Vite** with Firebase authentication, Firestore-powered watchlist, dynamic routing, and TMDB API integration.
+A modern, responsive movies website built using **React** and **Vite** with Firebase authentication, Firestore-powered watchlist, dynamic routing, and TMDB API integration.
 
 > ⚡ Fully responsive, with a drawer navigation on small screens, toast notifications, and dark theme styling.
 
 ## 🚀 Demo
 
-👉 **[Visit this link see the live demo](https://netflix-clone-sage-xi.vercel.app/)**
+👉 **[Visit this link see the live demo]()**
 
 ## 🚀 Features
 
@@ -69,8 +69,8 @@ src/
 ### 🧱 Clone the Repository
 
 ```bash
-git clone https://github.com/Deepaksharma120201/Netflix-Clone
-cd Netflix-Clone
+git clone https://github.com/Deepaksharma120201/Movie-Mingle
+cd Movie-Mingle
 ```
 
 ### 📦 Install Dependencies
