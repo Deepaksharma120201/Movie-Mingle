@@ -6,7 +6,7 @@ A modern, responsive movies website built using **React** and **Vite** with Fire
 
 ## 🚀 Demo
 
-👉 **[Visit this link see the live demo]()**
+👉 **[Visit this link see the live demo](https://movie-mingle-ochre.vercel.app/)**
 
 ## 🚀 Features
 

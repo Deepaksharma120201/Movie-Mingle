@@ -188,7 +188,9 @@ const DetailsPage = () => {
 
         <div className="videos-section">
           <h2>Videos</h2>
-          {video && <VideoComponent id={video.key} />}
+          <div className="main-item">
+            {video && <VideoComponent id={video.key} />}
+          </div>
           <div className="video-list">
             {videos.map((vid) => (
               <div className="video-item" key={vid.id}>

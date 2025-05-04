@@ -1,10 +1,8 @@
 import PropTypes from "prop-types";
 
-const VideoComponent = ({ id, small }) => {
+const VideoComponent = ({ id }) => {
   return (
     <iframe
-      width="100%"
-      height={small ? "150" : "600"}
       src={`https://www.youtube.com/embed/${id}`}
       title="YouTube video player"
       allowFullScreen
@@ -14,7 +12,6 @@ const VideoComponent = ({ id, small }) => {
 
 VideoComponent.propTypes = {
   id: PropTypes.string.isRequired,
-  small: PropTypes.bool,
 };
 
 export default VideoComponent;
